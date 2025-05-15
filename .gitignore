@@ -1,0 +1,54 @@
+# --- private files
+.private.*
+
+# --- auxiliary files
+.vscode/
+
+# --- ROS specific
+build/
+devel/
+install/
+logs/
+.catkin_workspace
+.catkin_tools/
+.catkin/
+
+# --- ROS build artifacts
+*.o
+*.so
+*.a
+*.pyc
+*.pyo
+*.pyd
+*.swp
+*~
+
+# --- ROS bag files
+*.bag
+*.bag.*
+
+# --- QtCreator
+CMakeLists.txt.user*
+*.autosave
+*.user
+*.qbs.user
+*.pro.user
+
+# --- Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+.env
+venv/
+ENV/
+
+# --- Logs
+*.log
+log/
+
+# --- OS specific
+.DS_Store
+Thumbs.db
