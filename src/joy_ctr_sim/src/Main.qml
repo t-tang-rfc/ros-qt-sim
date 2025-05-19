@@ -266,5 +266,53 @@ Window {
 				opacity: 0.5
 			}
 		}
+
+		Keys.onPressed: (event) => {
+			// --- Motion control: WASD + Arrow Keys ---
+			const step = 5;    // position step
+			const rstep = 5;   // rotation step (degrees)
+
+			switch (event.key) {
+			case Qt.Key_W: // +Y (up)
+				robot_stick.pos_y_ += step;
+				break;
+			case Qt.Key_S: // -Y (down)
+				robot_stick.pos_y_ -= step;
+				break;
+			case Qt.Key_A: // -X (left)
+				robot_stick.pos_x_ -= step;
+				break;
+			case Qt.Key_D: // +X (right)
+				robot_stick.pos_x_ += step;
+				break;
+			case Qt.Key_Q: // -Z (back)
+				robot_stick.pos_z_ -= step;
+				break;
+			case Qt.Key_E: // +Z (forward)
+				robot_stick.pos_z_ += step;
+				break;
+			// --- Rotation with arrow keys ---
+			case Qt.Key_Left:
+				robot_stick.rot_y_ -= rstep;
+				break;
+			case Qt.Key_Right:
+				robot_stick.rot_y_ += rstep;
+				break;
+			case Qt.Key_Up:
+				robot_stick.rot_x_ -= rstep;
+				break;
+			case Qt.Key_Down:
+				robot_stick.rot_x_ += rstep;
+				break;
+			case Qt.Key_Z:
+				robot_stick.rot_z_ -= rstep;
+				break;
+			case Qt.Key_C:
+				robot_stick.rot_z_ += rstep;
+				break;
+			default:
+				break;
+			}
+		}
 	}
 }
