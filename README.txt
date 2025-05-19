@@ -21,3 +21,10 @@ The manipulator is a joystick game controller.
    catkin_make
    ```
    This automatically generate the ROS workspace and the top level CMakeLists.txt.
+
+2. Create the package:
+   ```bash
+   # at src directory
+   catkin_create_pkg joy_ctr_sim roscpp joy
+   ```
+   This creates the package directory and the CMakeLists.txt.
